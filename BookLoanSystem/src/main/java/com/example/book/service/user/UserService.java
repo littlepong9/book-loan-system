@@ -14,6 +14,7 @@ public class UserService {
 
     private final UserRepository userRepository;
 
+    // 회원가입
     public void join(UserJoinForm form) {
         UserVO user = new UserVO();
         user.setId(form.getId());
@@ -24,19 +25,23 @@ public class UserService {
 //        userRepository.save(user);
     }
 
+    // 로그인
     public UserVO login(UserLoginForm user) {
 //        return userRepository.findByIdAndPw(user.getId(),user.getPw());
         return null;
     }
 
+    // 내 정보 조회
     public UserVO userInfo(String userId) {
         return null;
     }
 
+    // 내 정보 수정
     public void update(String userId, UserUpdateForm form) {
 //        userRepository.update(userId, form);
     }
 
+    // 회원탈퇴
     public void delete(String userId) {
 //        userRepository.delete(userId);
     }
