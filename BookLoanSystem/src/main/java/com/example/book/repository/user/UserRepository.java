@@ -1,4 +1,4 @@
-package com.example.book.repository;
+package com.example.book.repository.user;
 
 import org.springframework.stereotype.Repository;
 

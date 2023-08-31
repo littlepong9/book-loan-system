@@ -1,18 +1,14 @@
-package com.example.book.controller.domain;
+package com.example.book.controller.user.domain;
 
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 
 @Data
-public class UserJoinForm {
+public class UserUpdateForm {
 
     @NotBlank(message = "필수 입력 정보입니다.")
-    private String id;
-    @NotBlank(message = "필수 입력 정보입니다.")
-    private String pw1;
-    @NotBlank(message = "필수 입력 정보입니다.")
-    private String pw2;
+    private String pw;
     @NotBlank(message = "필수 입력 정보입니다.")
     private String name;
     @NotBlank(message = "필수 입력 정보입니다.")
