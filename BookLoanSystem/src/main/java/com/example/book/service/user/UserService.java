@@ -22,13 +22,12 @@ public class UserService {
         user.setName(form.getName());
         user.setTel(form.getTel());
         user.setAddr(form.getAddr());
-//        userRepository.save(user);
+        userRepository.save(user);
     }
 
     // 로그인
     public UserVO login(UserLoginForm user) {
-//        return userRepository.findByIdAndPw(user.getId(),user.getPw());
-        return null;
+        return userRepository.findByIdAndPw(user.getId(),user.getPw());
     }
 
     // 내 정보 조회
@@ -38,11 +37,11 @@ public class UserService {
 
     // 내 정보 수정
     public void update(String userId, UserUpdateForm form) {
-//        userRepository.update(userId, form);
+        userRepository.update(userId, form);
     }
 
     // 회원탈퇴
     public void delete(String userId) {
-//        userRepository.delete(userId);
+        userRepository.delete(userId);
     }
 }

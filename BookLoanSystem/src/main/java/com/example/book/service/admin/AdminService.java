@@ -14,7 +14,6 @@ public class AdminService {
     private final AdminRepository adminRepository;
 
     public String login(AdminLoginForm form) {
-//        return adminRepository.login(form.getId(), form.getPw());
-        return null;
+        return adminRepository.login(form.getId(), form.getPw());
     }
 }
