@@ -31,6 +31,7 @@ public class AdminService {
         book.setType(form.getType());
         book.setPublisher(form.getPublisher());
         book.setTitle(form.getTitle());
+        book.setImagePath(form.getImagePath());
         bookRepository.save(book);
 
     }
