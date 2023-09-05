@@ -2,6 +2,7 @@ package com.example.book.service.admin;
 
 import com.example.book.controller.admin.domain.AdminLoginForm;
 import com.example.book.controller.admin.domain.BookRegForm;
+import com.example.book.controller.admin.domain.BookUpdateForm;
 import com.example.book.domain.vo.BookVO;
 import com.example.book.repository.admin.AdminRepository;
 import com.example.book.repository.book.BookRepository;
@@ -21,18 +22,15 @@ public class AdminService {
         return adminRepository.login(form.getId(), form.getPw());
     }
 
-    public void regBook(BookRegForm form){
-
+    public void regBook(BookVO book){
         // 책 번호(no)는 시퀀스, 상태(state)는 대출가능으로 자동저장
-        BookVO book = new BookVO();
-        book.setAuthor(form.getAuthor());
-        book.setLib(form.getLib());
-        book.setTarget(form.getTarget());
-        book.setType(form.getType());
-        book.setPublisher(form.getPublisher());
-        book.setTitle(form.getTitle());
-        book.setImagePath(form.getImagePath());
         bookRepository.save(book);
+    }
+    public void updateBook(int no, BookUpdateForm form){
+        bookRepository.update(no,form);
+    }
 
+    public void deleteBook(int no){
+        bookRepository.delete(no);
     }
 }

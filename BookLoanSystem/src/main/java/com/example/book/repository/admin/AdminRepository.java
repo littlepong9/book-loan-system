@@ -4,6 +4,7 @@ import com.example.book.mapper.admin.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+// 관리자 저장소 조회(로그인)
 @Repository
 public class AdminRepository {
     @Autowired
