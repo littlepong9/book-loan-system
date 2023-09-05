@@ -10,6 +10,10 @@
         SELECT * FROM `user` WHERE `id` = #{id} AND `pw` = #{pw}
     </select>
 
+    <select id="find_by_id"  resultType="UserVO">
+        SELECT * FROM `user` WHERE `id` = #{id}
+    </select>
+
     <update id="update">
         UPDATE `user` SET `pw` = #{user.pw}, `name` = #{user.name}, tel = #{user.tel}, addr = #{user.addr} WHERE `id` = #{id};
     </update>

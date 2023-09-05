@@ -14,7 +14,6 @@
     <typeAliases>
         <typeAlias alias="UserVO" type="com.example.book.domain.vo.UserVO"/>
         <typeAlias alias="BookVO" type="com.example.book.domain.vo.BookVO"/>
-
     </typeAliases>
 
 </configuration>

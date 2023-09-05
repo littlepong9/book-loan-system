@@ -1,7 +1,7 @@
 package com.example.book.controller.admin;
 
 import com.example.book.controller.admin.domain.AdminLoginForm;
-import com.example.book.controller.book.domain.BookRegForm;
+import com.example.book.controller.admin.domain.BookRegForm;
 import com.example.book.service.admin.AdminService;
 import com.example.book.service.book.BookService;
 import lombok.RequiredArgsConstructor;
@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("/admin/")
 @RequiredArgsConstructor
 public class AdminController {
     private final AdminService adminService;
-    private final BookService bookService;
 
     @GetMapping("home")
     public String home(){
@@ -31,11 +32,14 @@ public class AdminController {
     }
 
     @PostMapping("login")
-    public String login(@Validated @ModelAttribute("form") AdminLoginForm form, BindingResult br){
+    public String login(@Validated @ModelAttribute("form") AdminLoginForm form, BindingResult br, HttpSession session){
         if(br.hasErrors())
             return "/admin/login";
 
         String adminId = adminService.login(form);
+        if(adminId!=null){
+            session.setAttribute("adminId",adminId);
+        }
 
         return "redirect:/admin/home";
     }
@@ -43,7 +47,7 @@ public class AdminController {
     // 책 등록
     @GetMapping("reg-book")
     public String regBook(@ModelAttribute("form") BookRegForm form){
-        return "book/reg";
+        return "admin/book-reg";
     }
 
     @PostMapping("reg-book")

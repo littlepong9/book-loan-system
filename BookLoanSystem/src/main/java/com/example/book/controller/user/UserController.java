@@ -43,7 +43,13 @@ public class UserController {
 
     // 로그인
     @GetMapping("login")
-    public String login(@ModelAttribute("form") UserLoginForm form) {
+    public String login(@ModelAttribute("form") UserLoginForm form,HttpSession session) {
+        String userId = (String)session.getAttribute("userId");
+
+        if(userId!=null)
+            return "user/login-comp";
+
+
         return "user/login";
     }
 

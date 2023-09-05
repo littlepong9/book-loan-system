@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
 @ToString
 @NoArgsConstructor
@@ -16,4 +18,5 @@ public class BookVO {
     private int state;
     private String target;
     private String type;
+    private String imagePath;
 }

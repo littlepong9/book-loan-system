@@ -32,7 +32,7 @@ public class UserService {
 
     // 내 정보 조회
     public UserVO userInfo(String userId) {
-        return null;
+        return userRepository.findById(userId);
     }
 
     // 내 정보 수정

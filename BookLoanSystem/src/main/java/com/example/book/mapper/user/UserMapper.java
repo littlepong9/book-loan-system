@@ -11,4 +11,5 @@ public interface UserMapper {
     UserVO find_by_id_and_pw(String id, String pw);
     void update(String id, UserUpdateForm user);
     void delete(String id);
+    UserVO find_by_id(String id);
 }

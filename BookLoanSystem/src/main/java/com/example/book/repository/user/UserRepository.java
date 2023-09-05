@@ -26,4 +26,8 @@ public class UserRepository {
     public void delete(String userId) {
         userMapper.delete(userId);
     }
+
+    public UserVO findById(String userId){
+        return userMapper.find_by_id(userId);
+    }
 }
