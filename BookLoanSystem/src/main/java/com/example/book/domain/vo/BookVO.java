@@ -16,7 +16,7 @@ public class BookVO {
     private String author;
     private String publisher;
     private String lib;
-    private int state;
+    private int state; // 대출 가능: 1 , 대출 불가 : 0
     private String target;
     private String type;
     private String imagePath;

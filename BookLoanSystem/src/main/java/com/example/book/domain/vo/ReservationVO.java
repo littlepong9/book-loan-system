@@ -11,5 +11,4 @@ public class ReservationVO {
     private int bookNo;
     private String userId;
     private LocalDateTime date;
-
 }

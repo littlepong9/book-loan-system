@@ -14,6 +14,9 @@
     <typeAliases>
         <typeAlias alias="UserVO" type="com.example.book.domain.vo.UserVO"/>
         <typeAlias alias="BookVO" type="com.example.book.domain.vo.BookVO"/>
+        <typeAlias alias="LoanVO" type="com.example.book.domain.vo.LoanVO"/>
+        <typeAlias alias="AdminVO" type="com.example.book.domain.vo.AdminVO"/>
+        <typeAlias alias="ReservationVO" type="com.example.book.domain.vo.ReservationVO"/>
     </typeAliases>
 
 </configuration>
