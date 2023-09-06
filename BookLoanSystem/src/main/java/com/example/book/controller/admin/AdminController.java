@@ -90,4 +90,6 @@ public class AdminController {
         adminService.regBook(book);
         return "redirect:/admin/home";
     }
+
+
 }
