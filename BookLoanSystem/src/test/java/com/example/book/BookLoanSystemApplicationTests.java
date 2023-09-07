@@ -1,11 +1,14 @@
 package com.example.book;
 
-import com.example.book.controller.user.domain.UserUpdateForm;
+import com.example.book.domain.vo.BookVO;
 import com.example.book.mapper.admin.AdminMapper;
+import com.example.book.mapper.book.BookMapper;
 import com.example.book.mapper.user.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 @SpringBootTest
 class BookLoanSystemApplicationTests {
@@ -15,15 +18,11 @@ class BookLoanSystemApplicationTests {
     @Autowired
     AdminMapper adminMapper;
 
+    @Autowired
+    BookMapper bookMapper;
+
     @Test
     void contextLoads() {
-//        UserVO user = new UserVO();
-//        user.setId("dummyId");
-//        user.setPw("dummyPw");
-//        user.setName("dummyName");
-//        user.setTel("dummyTel");
-//        user.setAddr("dummyAddr");
 
-//        System.out.println(adminMapper.login("dummyId", "dummyPw2"));
     }
 }
