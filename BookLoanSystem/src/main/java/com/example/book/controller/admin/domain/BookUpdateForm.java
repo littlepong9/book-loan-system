@@ -7,6 +7,8 @@ import javax.validation.constraints.NotBlank;
 
 @Data
 public class BookUpdateForm {
+    @NotBlank(message = "등록되지 않은 도서 입니다.")
+    private int no;
     @NotBlank(message = "필수 입력 정보입니다.")
     private String title;
     @NotBlank(message = "필수 입력 정보입니다.")

@@ -11,4 +11,8 @@ public class LoanRepository {
     public void save(LoanVO loan) {
 
     }
+
+    public void remove(int loanNo) {
+
+    }
 }

@@ -24,7 +24,7 @@ public class BookRepository {
     }
 
     // 도서 정보 수정
-    public void update(int no, BookUpdateForm form) {
+    public void update(int no, BookVO form) {
 
     }
 

@@ -11,4 +11,8 @@ public class ReservationRepository {
     public void save(ReservationVO reservation) {
 
     }
+
+    public void remove(int reservationNo) {
+
+    }
 }
