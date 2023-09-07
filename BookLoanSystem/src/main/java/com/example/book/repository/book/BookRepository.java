@@ -1,11 +1,13 @@
 package com.example.book.repository.book;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.example.book.controller.admin.domain.BookUpdateForm;
 import com.example.book.domain.vo.BookVO;
 import com.example.book.mapper.book.BookMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 // 도서 저장소 등록, 수정, 삭제, 조회(단 건, 검색, 검색 결과로 나온 총 도서 수량)
@@ -20,14 +22,13 @@ public class BookRepository {
 
     // 검색 결과 도서 리스트
     public List<BookVO> findAllBySearch(String field, String keyword, int page, int maxResult,String sortBy, String order) {
-
-
-        return null;
+        List<BookVO> bookVOS = bookMapper.findAllBySearch(field, keyword, page, maxResult, sortBy, order);
+        return bookVOS;
     }
 
     // 검색 결과로 나온 총 도서 수량 (view 페이징 시 필요)
     public int findCountBySearch(String field, String keyword){
-        return 0;
+        return bookMapper.findCountBySearch(field, keyword);
     }
 
     // 도서 정보 수정
