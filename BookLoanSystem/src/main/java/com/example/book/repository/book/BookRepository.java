@@ -30,13 +30,8 @@ public class BookRepository {
     }
 
     // 도서 정보 수정
-<<<<<<< HEAD
     public void update(int no, BookVO form) {
-
-=======
-    public void update(int no, BookUpdateForm form) {
         bookMapper.update(no, form);
->>>>>>> 9cc6a429a55a7bde0656aaa869d1a65fc0bd8e70
     }
 
     // 도서 정보 삭제

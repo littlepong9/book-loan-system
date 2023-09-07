@@ -62,7 +62,7 @@
             `lib` = #{lib},
             `target` = #{target},
             `type` = #{type},
-            `imagePath` = #{attachFile}
+            `imagePath` = #{imagePath}
         WHERE `no` = #{no}
     </update>
 

@@ -21,6 +21,6 @@ public interface BookMapper {
             String order
     );
     int findCountBySearch(String field, String keyword);
-    void update(int no, BookUpdateForm form);
+    void update(int no, BookVO form);
     void delete(int no);
 }
