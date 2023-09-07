@@ -38,7 +38,7 @@
         <if test="order == 'desc'">
             DESC
         </if>
-        LIMIT #{maxResult} OFFSET #{page * maxResult}
+        LIMIT #{maxResult} OFFSET #{offset}
     </select>
 
     <select id="findCountBySearch" resultType="int">
