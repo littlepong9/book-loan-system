@@ -20,4 +20,5 @@ public class BookVO {
     private String target;
     private String type;
     private String imagePath;
+
 }

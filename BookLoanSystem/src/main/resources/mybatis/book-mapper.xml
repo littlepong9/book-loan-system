@@ -72,4 +72,8 @@
     <delete id="delete" parameterType="int">
         DELETE FROM `book` WHERE `no` = #{no}
     </delete>
+
+    <select id="findByNo" resultType="BookVO">
+        SELECT * from `book` WHERE `no` = #{no}
+    </select>
 </mapper>

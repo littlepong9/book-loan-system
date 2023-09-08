@@ -135,23 +135,25 @@ public class UserController {
         return "user/my-page";
     }
 
-//    // 아이디 찾기
-//    @GetMapping("id-search")
-//    public String idSearch(@ModelAttribute UserIdSearchForm form){
-//        return "user/id-search";
-//    }
-//
+    // 아이디 찾기
+    @GetMapping("id-search")
+    public String idSearch(Model model){
+        model.addAttribute("form",new UserIdSearchForm());
+        return "user/id-search";
+    }
+
 //    @PostMapping("id-search")
 //    public String idSearch(){
 //        return "";
 //    }
-//
-//    // 비밀번호 찾기
-//    @GetMapping("pw-search")
-//    public String pwSearch(@ModelAttribute UserPwSearchForm form){
-//        return "user/pw-search";
-//    }
-//
+
+    // 비밀번호 찾기
+    @GetMapping("pw-search")
+    public String pwSearch(Model model){
+        model.addAttribute("form",new UserPwSearchForm());
+        return "user/pw-search";
+    }
+
 //    @PostMapping("pw-search")
 //    public String pwSearch(){
 //        return "";
