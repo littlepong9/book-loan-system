@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class loanRegForm {
+public class LoanRegForm {
     private String userId;
     private int bookNo;
     private LocalDateTime loanDate;

@@ -38,4 +38,8 @@ public class BookRepository {
     public void delete(int no) {
         bookMapper.delete(no);
     }
+
+    public BookVO findByNo(int no) {
+        return bookMapper.findByNo(no);
+    }
 }

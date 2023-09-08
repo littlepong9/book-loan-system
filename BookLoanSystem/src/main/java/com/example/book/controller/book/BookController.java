@@ -1,6 +1,8 @@
 package com.example.book.controller.book;
 
 import com.example.book.controller.admin.file.FileStore;
+import com.example.book.controller.book.domain.LoanRegForm;
+import com.example.book.controller.book.domain.ReservationRegForm;
 import com.example.book.domain.vo.BookVO;
 import com.example.book.service.book.BookService;
 import lombok.RequiredArgsConstructor;
@@ -9,6 +11,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.MalformedURLException;
@@ -45,6 +49,44 @@ public class BookController {
     @GetMapping("images/{filename}")
     public Resource imageView(@PathVariable String filename) throws MalformedURLException {
         return new UrlResource("file:" + fileStore.getFullPath(filename));
+    }
+
+    // 도서 상세보기
+    @GetMapping("info")
+    public String info(@RequestParam int no,Model model){
+        BookVO book = bookService.info(no);
+        if(book==null){
+            return "book/not-found";
+        }
+        model.addAttribute("book",book);
+        return "book/info";
+
+    }
+
+    // 대출하기
+    @GetMapping("loan")
+    public String loan(Model model){
+        model.addAttribute("form",new LoanRegForm());
+        return "book/loan-reg";
+    }
+
+    @PostMapping("loan")
+    public String loan(@Validated @ModelAttribute LoanRegForm form, BindingResult br,@RequestParam long period){
+        bookService.loan(form,period);
+        return "redirect:/book/info/" + form.getBookNo();
+    }
+
+    // 예약하기
+    @GetMapping("reservation")
+    public String reservation(Model model){
+        model.addAttribute("form",new ReservationRegForm());
+        return "book/reservation-reg";
+    }
+
+    @PostMapping("loan")
+    public String loan(@Validated @ModelAttribute ReservationRegForm form, BindingResult br){
+        bookService.reservation(form);
+        return "redirect:/book/info/" + form.getBookNo();
     }
 
 }

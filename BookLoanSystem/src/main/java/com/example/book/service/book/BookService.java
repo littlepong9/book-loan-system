@@ -1,7 +1,7 @@
 package com.example.book.service.book;
 
 import com.example.book.controller.book.domain.ReservationRegForm;
-import com.example.book.controller.book.domain.loanRegForm;
+import com.example.book.controller.book.domain.LoanRegForm;
 import com.example.book.domain.vo.BookVO;
 import com.example.book.domain.vo.LoanVO;
 import com.example.book.domain.vo.ReservationVO;
@@ -48,7 +48,7 @@ public class BookService {
     }
 
     // 대출
-    public void loan(loanRegForm form,long period){
+    public void loan(LoanRegForm form, long period){
         LoanVO loan = new LoanVO();
         loan.setUserId(form.getUserId());
         loan.setBookNo(form.getBookNo());
@@ -60,5 +60,10 @@ public class BookService {
     // 대출 반납
     public void loanReturn(int loanNo){
         loanRepository.remove(loanNo);
+    }
+
+    // 도서 상세보기
+    public BookVO info(int no){
+        return bookRepository.findByNo(no);
     }
 }
