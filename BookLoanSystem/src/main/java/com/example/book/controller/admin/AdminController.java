@@ -2,6 +2,7 @@ package com.example.book.controller.admin;
 
 import com.example.book.controller.admin.domain.AdminLoginForm;
 import com.example.book.controller.admin.domain.BookRegForm;
+import com.example.book.controller.admin.domain.BookUpdateForm;
 import com.example.book.controller.admin.file.FileStore;
 import com.example.book.controller.admin.file.UploadFile;
 import com.example.book.domain.vo.BookVO;
@@ -9,6 +10,8 @@ import com.example.book.service.admin.AdminService;
 import com.example.book.service.book.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.List;
 
 @Controller
@@ -73,6 +77,10 @@ public class AdminController {
 
     @PostMapping("reg-book")
     public String regBook(@Validated @ModelAttribute("form")BookRegForm form, BindingResult br) throws IOException {
+
+        if(br.hasErrors())
+            return "admin/book-reg";
+
         UploadFile attachFile = fileStore.storeFile(form.getAttachFile());
 
         // 책 번호(no)는 시퀀스, 상태(state)는 대출가능으로 자동저장
@@ -85,6 +93,44 @@ public class AdminController {
         book.setTitle(form.getTitle());
         book.setImagePath(attachFile.getStoreFilename());
         adminService.regBook(book);
+        return "redirect:/admin/home";
+    }
+
+    // 책 정보 수정
+    @GetMapping("update-book")
+    public String updateBook(Model model,@RequestParam int no){
+        BookUpdateForm form = new BookUpdateForm();
+        form.setNo(no);
+        model.addAttribute("form",form);
+
+        return "admin/book-update";
+    }
+
+    @PostMapping("update-book")
+    public String updateBook(@Validated @ModelAttribute("form")BookUpdateForm form, BindingResult br) throws IOException {
+        if(br.hasErrors())
+            return "admin/book-update";
+
+        UploadFile attachFile = fileStore.storeFile(form.getAttachFile());
+
+        BookVO book = new BookVO();
+        book.setNo(form.getNo());
+        book.setAuthor(form.getAuthor());
+        book.setLib(form.getLib());
+        book.setTarget(form.getTarget());
+        book.setType(form.getType());
+        book.setPublisher(form.getPublisher());
+        book.setTitle(form.getTitle());
+        book.setImagePath(attachFile.getStoreFilename());
+        adminService.updateBook(form.getNo(),book);
+
+
+        return "redirect:/admin/home";
+    }
+
+    @GetMapping("delete-book")
+    public String deleteBook(@RequestParam int no){
+        adminService.deleteBook(no);
         return "redirect:/admin/home";
     }
 }

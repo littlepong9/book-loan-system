@@ -130,6 +130,11 @@ public class UserController {
         return "/user/delete-user";
     }
 
+    @GetMapping("info")
+    public String info(@ModelAttribute("form")UserInfoForm form){
+        return "user/my-page";
+    }
+
 //    // 아이디 찾기
 //    @GetMapping("id-search")
 //    public String idSearch(@ModelAttribute UserIdSearchForm form){

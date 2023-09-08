@@ -42,6 +42,11 @@ public class BookService {
         reservationRepository.save(reservation);
     }
 
+    // 예약 취소
+    public void reservationCancel(int reservationNo){
+        reservationRepository.remove(reservationNo);
+    }
+
     // 대출
     public void loan(loanRegForm form,long period){
         LoanVO loan = new LoanVO();
@@ -50,5 +55,10 @@ public class BookService {
         loan.setLoanDate(LocalDateTime.now());
         loan.setReturnDate(loan.getLoanDate().plusDays(period));
         loanRepository.save(loan);
+    }
+
+    // 대출 반납
+    public void loanReturn(int loanNo){
+        loanRepository.remove(loanNo);
     }
 }

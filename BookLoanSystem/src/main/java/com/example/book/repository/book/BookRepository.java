@@ -1,6 +1,5 @@
 package com.example.book.repository.book;
 
-import com.example.book.controller.admin.domain.BookUpdateForm;
 import com.example.book.domain.vo.BookVO;
 import com.example.book.mapper.book.BookMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +13,9 @@ public class BookRepository {
     @Autowired
     BookMapper bookMapper;
 
-    public void save(BookVO book) {
-        bookMapper.save(book);
+    // 단 건별 조회
+    public BookVO get_book_by_no(int no) {
+        return bookMapper.get_book_by_no(no);
     }
 
     // 검색 결과 도서 리스트
@@ -29,9 +29,14 @@ public class BookRepository {
         return bookMapper.findCountBySearch(field, keyword);
     }
 
-    // 도서 정보 수정
-    public void update(int no, BookUpdateForm form) {
-        bookMapper.update(no, form);
+    // 등록
+    public void save(BookVO book) {
+        bookMapper.save(book);
+    }
+
+    // 수정
+    public void update(int no, BookVO bookVO) {
+        bookMapper.update(no, bookVO);
     }
 
     // 도서 정보 삭제

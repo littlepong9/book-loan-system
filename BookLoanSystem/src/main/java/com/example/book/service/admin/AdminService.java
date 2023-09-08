@@ -26,11 +26,13 @@ public class AdminService {
         // 책 번호(no)는 시퀀스, 상태(state)는 대출가능으로 자동저장
         bookRepository.save(book);
     }
-    public void updateBook(int no, BookUpdateForm form){
-        bookRepository.update(no,form);
+    public void updateBook(int no, BookVO book){
+        bookRepository.update(no,book);
     }
 
     public void deleteBook(int no){
         bookRepository.delete(no);
     }
+
+
 }
