@@ -9,8 +9,6 @@ import com.example.book.service.admin.AdminService;
 import com.example.book.service.book.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.List;
 
 @Controller
@@ -90,6 +87,4 @@ public class AdminController {
         adminService.regBook(book);
         return "redirect:/admin/home";
     }
-
-
 }
