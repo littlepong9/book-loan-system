@@ -2,16 +2,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.book.mapper.book.BookMapper">
-    <insert id="save" parameterType="BookVO">
-        INSERT INTO `book` VALUES(NULL, #{title}, #{author}, #{publisher}, #{lib}, #{state}, #{target}, #{type}, #{imagePath})
-    </insert>
+    <select id="get_book_by_no" parameterType="int">
+        SELECT * FROM `book` WHERE `no` = #{no}
+    </select>
 
     <resultMap id="findAllBySearch_map" type="BookVO">
         <result property="no" column="no"/>
         <result property="title" column="title"/>
         <result property="author" column="author"/>
     </resultMap>
-
     <select id="findAllBySearch" resultMap="findAllBySearch_map">
         SELECT * FROM `book`
         WHERE
@@ -54,15 +53,19 @@
         </choose>
     </select>
 
+    <insert id="save" parameterType="BookVO">
+        INSERT INTO `book` VALUES(NULL, #{title}, #{author}, #{publisher}, #{lib}, #{state}, #{target}, #{type}, #{imagePath})
+    </insert>
+
     <update id="update">
         UPDATE `book` SET
-            `title` = #{title},
-            `author` = #{author},
-            `publisher` = #{publisher},
-            `lib` = #{lib},
-            `target` = #{target},
-            `type` = #{type},
-            `imagePath` = #{imagePath}
+            `title` = #{bookVO.title},
+            `author` = #{bookVO.author},
+            `publisher` = #{bookVO.publisher},
+            `lib` = #{bookVO.lib},
+            `target` = #{bookVO.target},
+            `type` = #{bookVO.type},
+            `imagePath` = #{bookVO.imagePath}
         WHERE `no` = #{no}
     </update>
 
