@@ -72,6 +72,9 @@ public class BookController {
 
     @PostMapping("loan")
     public String loan(@Validated @ModelAttribute LoanRegForm form, BindingResult br,@RequestParam long period){
+        if(br.hasErrors())
+            return "book/loan-reg";
+
         bookService.loan(form,period);
         return "redirect:/book/info/" + form.getBookNo();
     }
@@ -83,8 +86,11 @@ public class BookController {
         return "book/reservation-reg";
     }
 
-    @PostMapping("loan")
+    @PostMapping("reservation")
     public String loan(@Validated @ModelAttribute ReservationRegForm form, BindingResult br){
+        if(br.hasErrors())
+            return "book/reservation-reg";
+
         bookService.reservation(form);
         return "redirect:/book/info/" + form.getBookNo();
     }
