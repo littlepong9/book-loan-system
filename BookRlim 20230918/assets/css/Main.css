@@ -16,155 +16,151 @@ a {
 }
 
 body {background-color: #f6f6f6;}
-
-/* left banner 영역 */
-.left_banner {
-  position:absolute;
-    margin: 184px 85px 1145px 0;
+.wrap {width: 540px; margin: 0 auto; height:auto; overflow:hidden; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+header {width: 540px; height:88px; background-color: #fff;}
+header > .navbar {height:44px;}
+.container{padding:0;}
+.container > .navbar {
+    width:540px; height:44px;
 }
-
-.left_banner > a > img {
-  width: 259px;
-  margin-left: 350px;
+.col-xs-6 > .btn > a > img {
+    width:100px; height:22px;
+    margin-top:-23px;
 }
-
-/* right banner 영역 */
-.right_banner1 {
-  position:absolute;
-    margin: 184px 85px 1145px 0;
-}
-
-.right_banner1 > a > img {
-  width: 259px;
-  margin-left:1270px;
-}
-
-.right_banner2 {
-  position:absolute;
-    margin: 184px 85px 1145px 0;
-}
-
-.right_banner2 > a > img {
-  width: 259px;
-  margin-top: 404px;
-  margin-left:1270px;
-}
-@media(max-width:912px){
-  .left_banner,.right_banner1,.right_banner2 {
-  display:none;
-  }
-  }
-@media(max-width:768px){
-.left_banner,.right_banner1,.right_banner2 {
-display:none;
-}
-}
-
-.wrap {width: 540px; margin: 0 auto; height:auto; overflow: hidden;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
-
-/*header 영역*/
-header {padding: 10px 0; background-color: #fff; display: block; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
-.top_nav{background-color: #fff; height:28px;}
-.clear {clear: both;}
-.logo {text-align: center;}
-.logo img {width:100px; height:22px; }
-.left {position:absolute; top:0;}
-.right{position:absolute; top:0;}
-.right_icon{margin-left:470px; display: flex;}
-.map1{margin-top:3px; padding-top:8.5px; margin-right:15px;}
-.map1 img{width:16px; height:22px;}
-.bell {margin-top:2px; padding-top:8.5px; margin-right:15px;}
-.bell img{width:28px; height:20px;}
-hr { margin-top:10px;}
-.under_nav {background-color: #fff; margin-top:6px; margin-bottom:6px;}
-.under_nav > ul {
+.navbar > .container > .col-xs-3 {
     display: flex;
+    margin-top:-18px;
 }
-.under_nav > ul > li {
+.navbar > .container > .col-xs-3 > .icon > a {
+    border:none;
+    text-decoration: none;
+}
+.navbar > .container > .col-xs-3  > .icon > .map1 {
+    margin-top:3px; margin-right:7.5px;
+}
+.navbar > .container > .col-xs-3  > .icon > .map1 > img {
+    width:16px; height:22px;
+}
+
+.navbar > .container > .col-xs-3  > .icon > .navbar-toggler {
+  padding:0;
+}
+
+.navbar > .container > .col-xs-3  > .icon > .navbar-toggler > img {
+  width:28px; height:20px; 
+}
+.navbar > .container > .btn {
+    display: flex;
+    margin-top:-5px;
+    margin-left:-15px;
+}
+.navbar > .container > .btn > img {
+    width:24px; height:24px;
+}
+.navbar > .container > .btn > p {
+    font-family: 'paybooc-Bold';
+    margin-left:4px;
+    margin-top:2px;
+    font-size: 14px;
+}
+.navbar > .container > .col-xs-3 > .icon {
+    margin-left:15px;
+}
+
+.offcanvas.offcanvas-start{
+  width:300px;
+  height:100%;
+  padding:0;
+}
+.offcanvas > .offcanvas-header {
+  width:367px;
+  height:74px;}
+ .offcanvas > .offcanvas-header > span {
+  margin-top:-50px;
+}
+.offcanvas-header > .m-auto > .offcanvas-title {
+    color:#000503;
+    text-align:center;
+    font-family: 'paybooc-Bold';
+    font-style: bold;
+}
+.offcanvas > .offcanvas-body > div > .nav1 > .nav-item{
     color:#000503;
     font-family: 'paybooc-Bold';
     font-style: bold;
-    font-size:14px;
+    font-size:16px;
     margin:0 auto;
-    padding-top:14px;
+    padding-top:25px;
 }
-.under_nav > ul > li > a {
-    margin:20px;
-    padding-bottom:0.5rem;
-    padding-top:0.5rem;
+.offcanvas > .offcanvas-body > div > .nav1 > .nav-item > .nav-link{
+border:none;
 }
-.under_nav > ul > li > a:active, .under_nav > ul > li > a:hover {
+.offcanvas > .offcanvas-body > div > .nav1{
+ display:block;
+}
+
+.nav{
+  background-color: #fff;
+  display: flex;
+}
+
+.nav > .nav-item {
+  color:#000503;
+    font-family: 'paybooc-Bold';
+    font-size:16px;
+}
+
+.nav > .nav-item > .nav-link{
+    color:#000503;
+    text-decoration: none;
+    font-family: 'paybooc-Bold';
+    font-size:16px;}
+
+    .nav > .nav-item > .nav-link:active, .nav > .nav-item > .nav-link:hover {
     color: #ff3822;
     border-color: #ff3822;
     border-bottom: 4px solid #ff3822;
     height: 100%;
 }
 
-.main-nav-left {
-  position:absolute;
-  margin-top:-25px;
-  width:100px;
-  height:100%;
+/* left banner 영역 */
+.left_banner {
+    position:absolute;
+      margin: 80px 85px 1145px 0;
+  }
+  
+  .left_banner > a > img {
+    width: 259px;
+    margin-left: 300px;
+  }
+  
+  /* right banner 영역 */
+  .right_banner1 {
+    position:absolute;
+      margin: 80px 85px 11145px 0;
+  }
+  
+  .right_banner1 > a > img {
+    width: 259px;
+    margin-left:1130px;
+  }
+  
+  .right_banner2 {
+    position:absolute;
+      margin: 80px 85px 1145px 0;
+  }
+  
+  .right_banner2 > a > img {
+    width: 259px;
+    margin-top: 404px;
+    margin-left:1130px;
 }
 
-.main-nav-left > .top-menu
-{position: absolute;
-  margin-top:-1px;
-  display: flex;
-  margin-left:10px;
-}
-.main-nav-left > .top-menu > img
-{
-  width:27.5px;
-  height:27.5px;
-}
-.main-nav-left > .top-menu > p
-{
-  margin-top:4px;
-  margin-left:6px;
-  font-size:14px;
-}
-.sub-menu ul {
-  list-style: none;
-  padding: 0;
-}
-.sub-menu-title > h1{
-  color:#000503;
-  margin-left:30px;
-  margin-top:40px;
-}
-.sub-menu{
-  position:absolute;
-  width: 0;
-  height: 100%;
-  overflow: hidden;
-  background: rgb(255, 255, 255);
-  transition-duration: 0.5s;
-  margin-top:-5px;
-}
-.main-nav-left:hover > .sub-menu{
-  z-index:1;
-  height: 100%;
-  width: 250px;
-  overflow: hidden;
-}
-.sub-menu-list li {
-  margin-top:40px;
-  color:#000503;
-    font-family: 'paybooc-Bold';
-    font-style: bold;
-    margin-left:25px;
-    height:20px;
-    width:150px;
-    padding:10px 10px 10px 10px;
-}
-.sub-menu-list li > a:hover {
-  color:#ff3822;
-}
-
-/*slide 영역*/
+  /*slide 영역*/
 .slidewrap{
-    width: 100%;
+    width: 540px;
+    height: 540px;
+    margin:0 auto;
     position: relative;
     overflow: hidden;
 
@@ -181,7 +177,6 @@ hr { margin-top:10px;}
     width: 540px;
     height: 540px;
     overflow: hidden;
-
     color: white;
     font-size: 40px;
 }
@@ -210,89 +205,90 @@ hr { margin-top:10px;}
 
 /* UI/UX영역 */
 .container2{
-        width: 540px;
-        height: 210px;
-        padding: 48px 18px 28px 17px;
-        background-color: #fff;
+    width: 540px;
+    height: 275px;
+    padding: 48px 18px 28px 17px;
+    background-color: #fff;
 }
 
 /* Search2영역 */
 .search2 {
-    width: 416px;
-    height: 42px;
-    margin: -15px 42px;
-    justify-content: center;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+width: 416px;
+height: 42px;
+margin: -15px 42px;
+justify-content: center;
+position: relative;
+display: flex;
+flex-wrap: wrap;
+align-items: stretch;
 }
 .search2 input {
-    height:42px;
-    width:360px;
-    background-color: #f9f9f9;
-    border-radius: 20px 0px 0px 20px;
-    text-align: center;
+height:42px;
+width:360px;
+background-color: #f9f9f9;
+border-radius: 20px 0px 0px 20px;
+text-align: center;
 }
 .search2 button {
-    width: 56px;
-    height: 42px;
-    border-radius: 0px 20px 20px 0px;
-    background-color: #fcfcfc;
-    margin-left:-5px;
-    border:none;
+width: 56px;
+height: 42px;
+border-radius: 0px 20px 20px 0px;
+background-color: #fcfcfc;
+margin-left:-5px;
+border:none;
 }
 .search2 button img {width:18px; height:16px;}
 input:-ms-input-placeholder {
-    color:#000503;
-    font-family: 'paybooc-Bold';
-    font-style: bold;
-    font-size:14px;
+color:#000503;
+font-family: 'paybooc-Bold';
+font-style: bold;
+font-size:14px;
 }
 input::-webkit-input-placeholder {
-    color:#000503;
-    font-family: 'paybooc-Bold';
-    font-style: bold;
-    font-size:14px;
+color:#000503;
+font-family: 'paybooc-Bold';
+font-style: bold;
+font-size:14px;
 }
 input::-moz-placeholder {
-    color:#000503;
-    font-family: 'paybooc-Bold';
-    font-style: bold;
-    font-size:14px;
+color:#000503;
+font-family: 'paybooc-Bold';
+font-style: bold;
+font-size:14px;
 }
 
 /* Library_button영역 */
 .Library_button {
-    margin-left:-10px;
-    display: flex;
+margin-left:-10px;
+display: flex;
 }
 .Library_button>a {
-    margin:45px 10px;
-    text-align: center;
-    width:80px;
-    height:80px;
+margin:45px 10px;
+text-align: center;
+width:80px;
+height:80px;
+text-decoration: none;
 }
 .Library_button>a>button {
-    width:80px;
-    height:80px;
-    background-color:#f5f5f5;
-    padding:20px;
-    border-radius: 50px;
-    border:none;
-    margin: 12.5px 12.5px;
+width:80px;
+height:80px;
+background-color:#f5f5f5;
+padding:20px;
+border-radius: 50px;
+border:none;
+margin: 12.5px 12.5px;
 
 }
 .Library_button>a>button>img {
-    width:45.59 px;
-    height:36.4512 px;
+width:45.59 px;
+height:36.4512 px;
 }
 .Library_button>a>p {
-    color:#000503;
-    font-family: 'paybooc-Bold';
-    font-style: bold;
-    font-size:12px;
-    margin-left:20px;
+color:#000503;
+font-family: 'paybooc-Bold';
+font-style: bold;
+font-size:12px;
+margin-left:20px;
 }
 .Library_button>a>button:hover {
 background-color: #ff3822;
@@ -301,7 +297,7 @@ background-color: #ff3822;
 /* Grid영역 */
 .container3  {
     width: 540px;
-    height: 605px;
+    height: 630px;
     padding: 0px 18px 54px 17px;
     background-color: #f6f6f6;
   }
@@ -312,13 +308,19 @@ background-color: #ff3822;
     flex-wrap: wrap;
     align-items: stretch;
   }
+
+  .title > a {
+    text-decoration: none;
+  }
+
     .title > a > h3
   {
     color:#000503;
     font-family: 'paybooc-Bold';
     font-style: bold;
+    font-size:22px;
     margin-top:42px;
-    margin-left:10px;
+    margin-left:5px;
   }
   .title > .More {
     color:#ff3822;
@@ -330,18 +332,24 @@ background-color: #ff3822;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    margin: 50px 0 25px 200px;
+    margin: 50px 0 25px 175px;
   }
   .Grid {
     position: relative;
     width: 494px;
     height: 494px;
-    margin-left:4px;}
+    margin-left:-61.5px;
+    margin-top:-10px;
+    padding:0;
+    }
   .Grid1 {
     display: flex;
   }
   .innerGrid3 {
     display: flex;
+  }
+  .innerGrid2 {
+    padding:0;
   }
   .Grid_book1 > a > img {
     width: 328px;
@@ -376,66 +384,72 @@ background-color: #ff3822;
 
 /* message영역 */
 .container4{
-        width:540px;
-        height: 200px;
-        padding: 50px 10px 0;
-        background-color: #64626b;
+    width:540px;
+    height: 250px;
+    padding: 50px 10px;
+    background-color: #64626b;
 }
 .message {
-    margin-left:40px;
-    text-align: center;
+margin-left:40px;
+text-align: center;
 }
-.h1{
-        width: 290px;
-        height: 70px;
-        margin: 0 0 15px 0;
-        font-family: paybooc;
-        font-size: 24px;
-        font-weight: 800;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: left;
-        color: #fff;
-}
-.h3 {
-    width: 555px;
-    height: 88px;
+.container4 > .message > .h1{
+    width: 290px;
+    height: 70px;
+    margin: 0 0 15px 0;
     font-family: paybooc;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 800;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.3;
-    letter-spacing: 0.58px;
+    line-height: normal;
+    letter-spacing: normal;
     text-align: left;
     color: #fff;
-  }
+}
+.container4 > .message > .h3 {
+    width: 540px;
+    height: 88px;
+font-family: paybooc;
+font-size: 18px;
+font-weight: 500;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.3;
+letter-spacing: 0.58px;
+text-align: left;
+color: #fff;
+}
 
-  /* swiper1영역 */
+/* swiper1영역 */
 
-  .swiper1 > h2 {
+.swiper1 > h2 {
     margin-top:45px;
-    margin-left:30px;
-    font-family: paybooc;
+    margin-left:20px;
+    font-size:26px;
+    font-family: 'paybooc-Bold';
   }
-  .slide_title{
+  .swiper1 > .slide_title{
     width: 540px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
   }
-  .slide_title > a > h3
+  .swiper1 > .slide_title > a {
+    text-decoration: none;
+  }
+
+  .swiper1 > .slide_title > a > h3
   {
     color:#000503;
     font-family: 'paybooc-Bold';
     font-style: bold;
-    margin-top:42px;
-    margin-left:30px;
+    font-size:22px;
+    margin-top:32px;
+    margin-left:22px;
   }
-  .slide_title > .More {
+  .swiper1 > .slide_title > .More {
     color:#ff3822;
     font-size: 12px;
     font-family: 'paybooc-Bold';
@@ -445,23 +459,26 @@ background-color: #ff3822;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    margin: 50px 0 25px 200px;
+    margin-top: 45px;
+    margin-left:170px;
   }
 
-  .container5 {
+  .swiper1 > .container5 {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
 
-.container5 > a >.card {
+  .swiper1 > .container5 > a >.card {
     display: inline-block;
     margin: 10px;
     margin-left:25px;
     width: 275px;
     height: 365px;
     background-color: #fcfcfc;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    border:none;
     overflow: hidden;
     border-radius: 20px 20px 20px 20px;
     -webkit-border-radius: 20px 20px 20px 20px;
@@ -470,23 +487,22 @@ background-color: #ff3822;
     -o-border-radius: 20px 20px 20px 20px;
 }
 
-.card > img {
+.swiper1 > .container5 > a > .card > img {
     width:275px;
     height:275px;
 }
 
-.card:hover {
+.swiper1 > .container5 > a > .card:hover {
     transform: scale(0.9, 0.9);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
   }
 
-  .card > h4 {
+  .swiper1 > .container5 > a > .card > h4 {
         width: 74px;
         height: 16px;
         margin: 10px 0px 9px 10px;
-        font-family: paybooc;
+        font-family: 'paybooc-bold';
         font-size: 13px;
-        font-weight: bold;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.31;
@@ -495,11 +511,11 @@ background-color: #ff3822;
         color: #000503;
   }
   
-  .card > p {
+  .swiper1 > .container5 > a > .card > p {
         width: 250px;
         height: 33px;
         margin: 9px 0 0 10px;
-        font-family: paybooc;
+        font-family: 'paybooc-bold';
         font-size: 11px;
         font-weight: 500;
         font-stretch: normal;
@@ -512,35 +528,140 @@ background-color: #ff3822;
 
     /* swiper2영역 */
 
-  .swiper2 > h2 {
-    margin-top:45px;
-    margin-left:30px;
-    font-family: paybooc;
-  }
+    .swiper2 > h2 {
+        margin-top:45px;
+        margin-left:20px;
+        font-size:26px;
+        font-family: 'paybooc-Bold';
+      }
+      .swiper2 > .slide_title{
+        width: 540px;
+        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+      .swiper2 > .slide_title > a {
+        text-decoration: none;
+      }
+    
+      .swiper2 > .slide_title > a > h3
+      {
+        color:#000503;
+        font-family: 'paybooc-Bold';
+        font-style: bold;
+        font-size:22px;
+        margin-top:32px;
+        margin-left:22px;
+      }
+      .swiper2 > .slide_title > .More {
+        color:#ff3822;
+        font-size: 12px;
+        font-family: 'paybooc-Bold';
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        position:absolute;
+        margin-top: 45px;
+        margin-left:470px;
+      }
+    
+      .swiper2 > .container5 {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    
+      .swiper2 > .container5 > a >.card {
+        display: inline-block;
+        margin: 10px;
+        margin-left:25px;
+        width: 275px;
+        height: 365px;
+        background-color: #fcfcfc;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+        border:none;
+        overflow: hidden;
+        border-radius: 20px 20px 20px 20px;
+        -webkit-border-radius: 20px 20px 20px 20px;
+        -moz-border-radius: 20px 20px 20px 20px;
+        -ms-border-radius: 20px 20px 20px 20px;
+        -o-border-radius: 20px 20px 20px 20px;
+    }
+    
+    .swiper2 > .container5 > a > .card > img {
+        width:275px;
+        height:275px;
+    }
+    
+    .swiper2 > .container5 > a > .card:hover {
+        transform: scale(0.9, 0.9);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+      }
+    
+      .swiper2 > .container5 > a > .card > h4 {
+            width: 74px;
+            height: 16px;
+            margin: 10px 0px 9px 10px;
+            font-family: 'paybooc-bold';
+            font-size: 13px;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.31;
+            letter-spacing: 0.33px;
+            text-align: left;
+            color: #000503;
+      }
+      
+      .swiper2 > .container5 > a > .card > p {
+            width: 250px;
+            height: 33px;
+            margin: 9px 0 0 10px;
+            font-family: 'paybooc-bold';
+            font-size: 11px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.31;
+            letter-spacing: 0.33px;
+            text-align: left;
+            color: #000503;
+          }
 
-  .swiper2 > .slide_title > .More {
-    color:#ff3822;
-    font-size: 12px;
-    font-family: 'paybooc-Bold';
-    font-weight: 800;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    margin: 50px 0 25px 140px;
-  }
 
 
   /* swiper3영역 */
 
   .swiper3 > h2 {
     margin-top:45px;
-    margin-left:30px;
-    font-family: paybooc;
-        color: #000503;
+    margin-left:20px;
+    font-size:26px;
+    font-family: 'paybooc-Bold';
+  }
+  .swiper3 > .slide_title{
+    width: 540px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .swiper3 > .slide_title > a {
+    text-decoration: none;
   }
 
+  .swiper3 > .slide_title > a > h3
+  {
+    color:#000503;
+    font-family: 'paybooc-Bold';
+    font-style: bold;
+    font-size:22px;
+    margin-top:32px;
+    margin-left:22px;
+  }
   .swiper3 > .slide_title > .More {
     color:#ff3822;
     font-size: 12px;
@@ -551,295 +672,327 @@ background-color: #ff3822;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    margin: 50px 0 25px 175px;
+    position:absolute;
+    margin-top: 45px;
+    margin-left:470px;
   }
 
-  /* banner1영역 */
-  .banner1{
-  margin: 28.5px 0 0;
-  padding: 17px 158.3px 0 25.9px;
-  }
-  .banner1 > a > img {
-    width:500px;
-    margin-left:-5px;
+  .swiper3 > .container5 {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* Map 영역 */
-  .container6 {
-    width:540px;
-    height:830px;
-    overflow:hidden;
+  .swiper3 > .container5 > a >.card {
+    display: inline-block;
+    margin: 10px;
+    margin-left:25px;
+    width: 275px;
+    height: 365px;
+    background-color: #fcfcfc;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    border:none;
+    overflow: hidden;
+    border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -ms-border-radius: 20px 20px 20px 20px;
+    -o-border-radius: 20px 20px 20px 20px;
+}
+
+.swiper3 > .container5 > a > .card > img {
+    width:275px;
+    height:275px;
+}
+
+.swiper3 > .container5 > a > .card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
   }
-  .container6 > h2 {
-    margin-top:45px;
-    margin-left:30px;
-    font-family: paybooc;
+
+  .swiper3 > .container5 > a > .card > h4 {
+        width: 74px;
+        height: 16px;
+        margin: 10px 0px 9px 10px;
+        font-family: 'paybooc-bold';
+        font-size: 13px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: 0.33px;
+        text-align: left;
         color: #000503;
   }
-  .container6 > .region1 {
-    display: flex;
-    margin-top:10px;
-  }
-  .container6 > .region2 {
-    display: flex;
-    margin-top:10px;
-  }
-  .container6 > .More {
-    color:#ff3822;
-    font-size: 12px;
-    font-family: 'paybooc-Bold';
-    position:absolute;
-    font-weight: 800;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    margin: -55px 0 0px 460px;
-  }
-
-  /* region1 영역 */
-  .region1 > a {
-    text-align: center;
-    font-size: 14px;
-    font-family: 'paybooc-Bold';
-    color:#000503; 
-  }
-
-  .region1 > a > .Seoul:hover {
-    background-color: #ff3822;
-    color:#fff;
-  }
-  .region1 > a > .Daegu:hover {
-    background-color: #ff3822;
-    color:#fff;
-  }
-  .region1 > a > .Busan:hover {
-    background-color: #ff3822;
-    color:#fff;
-  }
-  .region1 > a > .Seoul {
-    width: 55px;
-    height: 20px;
-    margin-top:42px;
-    margin-left:30px;
-    padding:10px 10px 10px 10px;
-    border-radius: 23px;
-    border: solid 1px #c5c5c5;
-    background-color: #f6f6f6;
-  }
-  .region1 > a > .Daegu {
-    width: 55px;
-    height: 20px;
-    margin-top:42px;
-    margin-left:7.5px;
-    padding:10px 10px 10px 10px;
-    border-radius: 23px;
-    border: solid 1px #c5c5c5;
-    background-color: #f6f6f6;
-  }
-  .region1 > a > .Busan {
-    width: 55px;
-    height: 20px;
-    margin-top:42px;
-    margin-left:7.5px;
-    padding:10px 10px 10px 10px;
-    border-radius: 23px;
-    border: solid 1px #c5c5c5;
-    background-color: #f6f6f6;
-  }
-  .region1 > a > .Sejong {
-    width: 70px;
-    height: 20px;
-    margin-top:42px;
-    margin-left:7.5px;
-    padding:10px 10px 10px 10px;
-    border-radius: 23px;
-    border: solid 1px #c5c5c5;
-    background-color: #f6f6f6;
-  }
-
-  /* region2 영역 */
-  .region2 > a {
-    text-align: center;
-    font-size: 14px;
-    font-family: 'paybooc-Bold';
-    color:#000503; 
-  }
-  .region2 > a > .Ulsan:hover {
-    background-color: #ff3822;
-    color:#fff;
-  }
-  .region2 > a > .Gwangju:hover {
-    background-color: #ff3822;
-    color:#fff;
-  }
-  .region2 > a > .Incheon:hover {
-    background-color: #ff3822;
-    color:#fff;
-  }
-  .region2 > a > .Daejeon:hover {
-    background-color: #ff3822;
-    color:#fff;
-  }
-
-  .region2 > a > .Ulsan {
-    width: 55px;
-    height: 20px;
-    margin-top:3px;
-    margin-left:30px;
-    padding:10px 10px 10px 10px;
-    border-radius: 23px;
-    border: solid 1px #c5c5c5;
-    background-color: #f6f6f6;
-  }
-
-  .region2 > a > .Gwangju {
-    width: 80px;
-    height: 20px;
-    margin-top:3px;
-    margin-left:7.5px;
-    padding:10px 10px 10px 10px;
-    border-radius: 23px;
-    border: solid 1px #c5c5c5;
-    background-color: #f6f6f6;
-  }
-  .region2 > a > .Incheon {
-    width: 70px;
-    height: 20px;
-    margin-top:3px;
-    margin-left:7.5px;
-    padding:10px 10px 10px 10px;
-    border-radius: 23px;
-    border: solid 1px #c5c5c5;
-    background-color: #f6f6f6;
-  }
-  .region2 > a > .Daejeon {
-    width: 80px;
-    height: 20px;
-    margin-top:3px;
-    margin-left:7.5px;
-    padding:10px 10px 10px 10px;
-    border-radius: 23px;
-    border: solid 1px #c5c5c5;
-    background-color: #f6f6f6;
-  }
-
-/* Library_image 영역 */
-  .Seoul-Metropolitan-Library {
-    margin-top:40px;
-    margin-left:30px;
-  }
-
-  .Seoul-Metropolitan-Library > .library_image {
-      width: 209.5px;
-      height: 210.5px;
-      margin: 0 0 0px;
-      border-radius: 7.5px;
-      -webkit-border-radius: 7.5px;
-      -moz-border-radius: 7.5px;
-      -ms-border-radius: 7.5px;
-      -o-border-radius: 7.5px;
+  
+  .swiper3 > .container5 > a > .card > p {
+        width: 250px;
+        height: 33px;
+        margin: 9px 0 0 10px;
+        font-family: 'paybooc-bold';
+        font-size: 11px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: 0.33px;
+        text-align: left;
+        color: #000503;
       }
 
-  .Seoul-Metropolitan-Library > h3 {
-      width: 182px;
-      height: 16px;
-      margin: 2.5px 0 0px;
-      font-family: paybooc;
-      font-size: 12.25px;
-      font-weight: bold;
+      /* banner1영역 */
+  .banner1{
+    margin: 28.5px 0 0;
+    padding: 17px 158.3px 0 25.9px;
+    }
+    .banner1 > a > img {
+      width:500px;
+      margin-left:-5px;
+    }
+  
+    /* Map 영역 */
+    section > .container6 {
+      width:540px;
+      height:830px;
+      overflow:hidden;
+    }
+    section > .container6 > a {
+        text-decoration: none;
+    }
+    section > .container6 > h2 {
+      margin-top:45px;
+      margin-left:30px;
+      font-family: 'paybooc';
+          color: #000503;
+    }
+    section > .container6 > .region1 {
+      display: flex;
+      margin-top:10px;
+    }
+    section > .container6 > .region2 {
+      display: flex;
+      margin-top:10px;
+    }
+    section > .container6 > .More {
+      color:#ff3822;
+      font-size: 12px;
+      font-family: 'paybooc-Bold';
+      position:absolute;
+      font-weight: 800;
       font-stretch: normal;
       font-style: normal;
-      line-height: 1.31;
-      letter-spacing: 0.33px;
+      line-height: normal;
+      letter-spacing: normal;
       text-align: left;
-      color: #000503;
-    }
-
-  .Seoul-Metropolitan-Library > .map_icon {
-      width: 8.5px;
-      height: 11.3px;
-      margin: 5px 7.1px 2.9px 1px;
-    }
-
-  .Seoul-Metropolitan-Library > p {
-    font-size: 3px;
-    margin-top:-20px;
-    margin-left:15px;
-    font-family: paybooc;
-    position:absolute;
+      margin: -15px 0 0px 460px;
     }
   
-      .Library_1 {
-        margin-left:7.5px;
-        display: flex;
+    /* region1 영역 */
+    section > .container6 > .region1 > a {
+        text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'paybooc-Bold';
+      color:#000503; 
+    }
+  
+    section > .container6 > .region1 > a > .Seoul:hover {
+      background-color: #ff3822;
+      color:#fff;
+    }
+    section > .container6 > .region1 > a > .Daegu:hover {
+      background-color: #ff3822;
+      color:#fff;
+    }
+    section > .container6 > .region1 > a > .Busan:hover {
+      background-color: #ff3822;
+      color:#fff;
+    }
+    section > .container6 > .region1 > a > .Seoul {
+        width: 75px;
+        height: 40px;
+      margin-top:42px;
+      margin-left:30px;
+      padding:10px 10px 10px 10px;
+      border-radius: 23px;
+      border: solid 1px #c5c5c5;
+      background-color: #f6f6f6;
+    }
+    section > .container6 > .region1 > a > .Daegu {
+        width: 75px;
+        height: 40px;
+      margin-top:42px;
+      margin-left:7.5px;
+      padding:10px 10px 10px 10px;
+      border-radius: 23px;
+      border: solid 1px #c5c5c5;
+      background-color: #f6f6f6;
+    }
+    section > .container6 > .region1 > a > .Busan {
+        width: 75px;
+        height: 40px;
+      margin-top:42px;
+      margin-left:7.5px;
+      padding:10px 10px 10px 10px;
+      border-radius: 23px;
+      border: solid 1px #c5c5c5;
+      background-color: #f6f6f6;
+    }
+    section > .container6 > .region1 > a > .Sejong {
+        width: 75px;
+        height: 40px;;
+      margin-top:42px;
+      margin-left:7.5px;
+      padding:10px 10px 10px 10px;
+      border-radius: 23px;
+      border: solid 1px #c5c5c5;
+      background-color: #f6f6f6;
+    }
+  
+    /* region2 영역 */
+    section > .container6 > .region2 > a {
+        text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'paybooc-Bold';
+      color:#000503; 
+    }
+    section > .container6 > .region2 > a > .Ulsan:hover {
+      background-color: #ff3822;
+      color:#fff;
+    }
+    section > .container6 > .region2 > a > .Gwangju:hover {
+      background-color: #ff3822;
+      color:#fff;
+    }
+    section > .container6 > .region2 > a > .Incheon:hover {
+      background-color: #ff3822;
+      color:#fff;
+    }
+    section > .container6 > .region2 > a > .Daejeon:hover {
+      background-color: #ff3822;
+      color:#fff;
+    }
+  
+    section > .container6 > .region2 > a > .Ulsan {
+      width: 75px;
+      height: 40px;
+      margin-top:3px;
+      margin-left:30px;
+      padding:10px 10px 10px 10px;
+      border-radius: 23px;
+      border: solid 1px #c5c5c5;
+      background-color: #f6f6f6;
+    }
+  
+    section > .container6 > .region2 > a > .Gwangju {
+      width: 80px;
+      height: 40px;
+      margin-top:3px;
+      margin-left:7.5px;
+      padding:10px 10px 10px 10px;
+      border-radius: 23px;
+      border: solid 1px #c5c5c5;
+      background-color: #f6f6f6;
+    }
+    section > .container6 > .region2 > a > .Incheon {
+      width: 80px;
+      height: 40px;
+      margin-top:3px;
+      margin-left:7.5px;
+      padding:10px 10px 10px 10px;
+      border-radius: 23px;
+      border: solid 1px #c5c5c5;
+      background-color: #f6f6f6;
+    }
+    section > .container6 > .region2 > a > .Daejeon {
+      width: 80px;
+      height: 40px;
+      margin-top:3px;
+      margin-left:7.5px;
+      padding:10px 10px 10px 10px;
+      border-radius: 23px;
+      border: solid 1px #c5c5c5;
+      background-color: #f6f6f6;
+    }
+  
+  /* Library_image 영역 */
+  section > .container6 > .Library_1 > .Library1{
+    text-decoration: none;
+  }
+
+  section > .container6 > .Library_1 > .Library1 > .Seoul-Metropolitan-Library {
+      margin-top:40px;
+      margin-left:30px;
+    }
+  
+    .Seoul-Metropolitan-Library > .library_image {
+        width: 209.5px;
+        height: 210.5px;
+        margin: 0 0 0px;
+        border-radius: 7.5px;
+        -webkit-border-radius: 7.5px;
+        -moz-border-radius: 7.5px;
+        -ms-border-radius: 7.5px;
+        -o-border-radius: 7.5px;
+        }
+  
+        section > .container6 > .Library_1 > .Library1 > .Seoul-Metropolitan-Library > h3 {
+        width: 182px;
+        height: 16px;
+        margin: 7px 0 0px;
+        font-family: 'paybooc';
+        font-size: 12.25px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: 0.33px;
+        text-align: left;
+        color: #000503;
       }
-      
-        .Library_2 {
+  
+        section > .container6 > .Library_1 > .Library1 > .Seoul-Metropolitan-Library > .map_icon {
+        width: 8.5px;
+        height: 11.3px;
+        margin: 5px 7.1px 2.9px 1px;
+      }
+  
+      section > .container6 > .Library_1 > .Library1 > .Seoul-Metropolitan-Library > p {
+      font-size: 3px;
+      margin-top:-15px;
+      margin-left:15px;
+      color:#000503;
+      font-family: 'paybooc-bold';
+      position:absolute;
+      }
+    
+      section > .container6 > .Library_1 {
           margin-left:7.5px;
           display: flex;
-          margin-top:-20px;
         }
-
-        .Library2 {
-          display: flex;
-          margin-top:0px;
+        
+        section > .container6 > .Library_2 {
+            margin-left:7.5px;
+            display: flex;
+            margin-top:-20px;
           }
   
-
-          .Jeongdok-Public-Library {
-            margin-top:40px;
-            margin-left:30px;
-          }
-        
-          .Jeongdok-Public-Library > .library_image {
-              width: 209.5px;
-              height: 210.5px;
-              margin: 0 0 0px;
-              border-radius: 7.5px;
-              -webkit-border-radius: 7.5px;
-              -moz-border-radius: 7.5px;
-              -ms-border-radius: 7.5px;
-              -o-border-radius: 7.5px;
-              }
-        
-          .Jeongdok-Public-Library > h3 {
-              width: 182px;
-              height: 16px;
-              margin: 2.5px 0 0px;
-              font-family: paybooc;
-              font-size: 12.25px;
-              font-weight: bold;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 1.31;
-              letter-spacing: 0.33px;
-              text-align: left;
-              color: #000503;
+          section > .container6 > .Library_2 > .Library2 {
+            display: flex;
+            margin-top:0px;
             }
-        
-          .Jeongdok-Public-Library > .map_icon {
-              width: 8.5px;
-              height: 11.3px;
-              margin: 5px 7.1px 2.9px 1px;
+            
+            section > .container6 > .Library_1 > .Library2 {
+                text-decoration: none;
             }
-        
-          .Jeongdok-Public-Library > p {
-            font-size: 3px;
-            margin-top:-20px;
-            margin-left:15px;
-            font-family: paybooc;
-            position:absolute;
-            }
-
-
-            .Jongno-Public-Library {
+  
+            section > .container6 > .Library_1 > .Library2 > .Jeongdok-Public-Library {
               margin-top:40px;
               margin-left:30px;
             }
           
-            .Jongno-Public-Library > .library_image {
+            section > .container6 > .Library_1 > .Library2 > .Jeongdok-Public-Library > .library_image {
                 width: 209.5px;
                 height: 210.5px;
                 margin: 0 0 0px;
@@ -850,11 +1003,11 @@ background-color: #ff3822;
                 -o-border-radius: 7.5px;
                 }
           
-            .Jongno-Public-Library > h3 {
+                section > .container6 > .Library_1 > .Library2 > .Jeongdok-Public-Library > h3 {
                 width: 182px;
                 height: 16px;
-                margin: 2.5px 0 0px;
-                font-family: paybooc;
+                margin: 7px 0 0px;
+                font-family: 'paybooc';
                 font-size: 12.25px;
                 font-weight: bold;
                 font-stretch: normal;
@@ -865,26 +1018,31 @@ background-color: #ff3822;
                 color: #000503;
               }
           
-            .Jongno-Public-Library > .map_icon {
+              section > .container6 > .Library_1 > .Library2 > .Jeongdok-Public-Library > .map_icon {
                 width: 8.5px;
                 height: 11.3px;
                 margin: 5px 7.1px 2.9px 1px;
               }
           
-            .Jongno-Public-Library > p {
-              font-size: 3px;
-              margin-top:-20px;
-              margin-left:15px;
-              font-family: paybooc;
-              position:absolute;
-              }
-
-              .Namsan-Public-Library {
+              section > .container6 > .Library_1 > .Library2 > .Jeongdok-Public-Library > p {
+                font-size: 3px;
+                margin-top:-15px;
+                margin-left:15px;
+                color:#000503;
+                font-family: 'paybooc-bold';
+                position:absolute;
+                }
+                
+                section > .container6 > .Library_2 > .Library3 {
+                    text-decoration: none;
+                }
+  
+                section > .container6 > .Library_2 > .Library3 > .Jongno-Public-Library {
                 margin-top:40px;
                 margin-left:30px;
               }
             
-              .Namsan-Public-Library > .library_image {
+              section > .container6 > .Library_2 > .Library3 > .Jongno-Public-Library > .library_image {
                   width: 209.5px;
                   height: 210.5px;
                   margin: 0 0 0px;
@@ -895,11 +1053,11 @@ background-color: #ff3822;
                   -o-border-radius: 7.5px;
                   }
             
-              .Namsan-Public-Library > h3 {
+                  section > .container6 > .Library_2 > .Library3 > .Jongno-Public-Library > h3 {
                   width: 182px;
                   height: 16px;
-                  margin: 2.5px 0 0px;
-                  font-family: paybooc;
+                  margin: 7px 0 0px;
+                  font-family: 'paybooc';
                   font-size: 12.25px;
                   font-weight: bold;
                   font-stretch: normal;
@@ -910,63 +1068,117 @@ background-color: #ff3822;
                   color: #000503;
                 }
             
-              .Namsan-Public-Library > .map_icon {
+                section > .container6 > .Library_2 > .Library3 > .Jongno-Public-Library > .map_icon {
                   width: 8.5px;
                   height: 11.3px;
                   margin: 5px 7.1px 2.9px 1px;
                 }
             
-              .Namsan-Public-Library > p {
-                font-size: 3px;
-                margin-top:-20px;
-                margin-left:15px;
-                font-family: paybooc;
-                position:absolute;
+                section > .container6 > .Library_2 > .Library3 > .Jongno-Public-Library > p {
+                    font-size: 3px;
+                    margin-top:-15px;
+                    margin-left:15px;
+                    color:#000503;
+                    font-family: 'paybooc-bold';
+                    position:absolute;
+                    }
+
+                    section > .container6 > .Library_2 > .Library4{
+                        text-decoration: none;
+                    }
+
+                section > .container6 > .Library_2 > .Library4 > .Namsan-Public-Library {
+                  margin-top:40px;
+                  margin-left:30px;
                 }
-
               
-              /* footer영역 */
-          footer {
-            width: 540px;
-            height: 165px;
-            background-color: #e2e2e2;
-            padding:6.125px;
-          }
-
-          footer > section > a > .e-mail {
-              margin-left:175px;
-              margin-top:12.5px;
-              font-family: paybooc;
-              font-size: 11px;
-              font-weight: bold;
-              font-stretch: normal;
-              font-style: normal;
-              color: #000503;
-          }
-          footer > section > hr  {
-            width: 480px;
-            height: 0.5px;
-            margin-top:15px;
-            margin-bottom:15px;
-            margin-left:22.5px;
-            background-color: #707070;
-            border:none;
-          }
-          section > .copyright {
-            font-size:11px;
-            text-align:center;
-            margin-left:-5px;
-          }
-          section > .address {
-            font-size:11px;
-            margin-top:10px;
-            text-align:center;
-            margin-left:-5px;
-          }
-          section > .Rules {
-            font-size:11px;
-            margin-top:10px;
-            text-align:center;
-            margin-left:-5px;
-          }
+                section > .container6 > .Library_2 > .Library4 > .Namsan-Public-Library > .library_image {
+                    width: 209.5px;
+                    height: 210.5px;
+                    margin: 0 0 0px;
+                    border-radius: 7.5px;
+                    -webkit-border-radius: 7.5px;
+                    -moz-border-radius: 7.5px;
+                    -ms-border-radius: 7.5px;
+                    -o-border-radius: 7.5px;
+                    }
+              
+                    section > .container6 > .Library_2 > .Library4 > .Namsan-Public-Library > h3 {
+                    width: 182px;
+                    height: 16px;
+                    margin: 7px 0 0px;
+                    font-family: 'paybooc';
+                    font-size: 12.25px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.31;
+                    letter-spacing: 0.33px;
+                    text-align: left;
+                    color: #000503;
+                  }
+              
+                  section > .container6 > .Library_2 > .Library4 > .Namsan-Public-Library > .map_icon {
+                    width: 8.5px;
+                    height: 11.3px;
+                    margin: 5px 7.1px 2.9px 1px;
+                  }
+              
+                  section > .container6 > .Library_2 > .Library4 > .Namsan-Public-Library > p {
+                    font-size: 3px;
+                    margin-top:-15px;
+                    margin-left:15px;
+                    color:#000503;
+                    font-family: 'paybooc-bold';
+                    position:absolute;
+                    }
   
+                
+                /* footer영역 */
+            footer {
+              width: 540px;
+              height: 195px;
+              background-color: #e2e2e2;
+              padding:6.125px;
+            }
+            footer > section > a {
+                text-decoration: none;
+            }
+
+            footer > section > a > .e-mail {
+                margin-left:175px;
+                margin-top:12.5px;
+                font-family: paybooc;
+                font-size: 11px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                color: #000503;
+            }
+            footer > section > hr  {
+              width: 480px;
+              height: 0.5px;
+              margin-top:15px;
+              margin-bottom:15px;
+              margin-left:22.5px;
+              background-color: #707070;
+              border:none;
+            }
+            footer > section > .copyright {
+              font-size:11px;
+              text-align:center;
+              margin-left:-5px;
+            }
+            footer > section > .address {
+              font-size:11px;
+              margin-top:10px;
+              text-align:center;
+              margin-left:-5px;
+            }
+            footer > section > .Rules {
+              font-size:11px;
+              margin-top:10px;
+              text-align:center;
+              margin-left:-5px;
+            }
+    
