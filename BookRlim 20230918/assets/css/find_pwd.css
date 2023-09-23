@@ -167,6 +167,7 @@ color: #000503;
 .Box1 > form > p > input{
   margin:10px;
   border-bottom:1px solid #000503;
+  background-color: #fcfcfc;
   width:150px;
 }
 .Box1 > form > p
