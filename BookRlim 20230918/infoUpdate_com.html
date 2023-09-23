@@ -5,10 +5,12 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
 <title>BookRlim_join</title>
 <link rel="apple-touch-icon" href="" />
-<link rel="stylesheet" href="./assets/css/reform_pwd_view.css">
+<link rel="stylesheet" href="./assets/css/infoUpdate_com.css">
 <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/e7e4504204.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e7e4504204.js" crossorigin="anonymous"></script>
+<script src="./assets/js/find.js" defer></script>
+
 <script type="text/javascript">
 // 주소창 자동 닫힘
 window.addEventListener("load", function(){
@@ -42,16 +44,19 @@ window.scrollTo(0, 1);
                       <div>
                         <ul class="nav1 justify-content-center">
                             <li class="nav-item">
-                                <a class="nav-link" href="join.html">회원가입</a>
+                                <a class="nav-link" href="./join.html">회원가입</a>
                               </li>
                             <li class="nav-item">
-                                <span class="d-flex"><a class="nav-link login" href="Login.html">로그인</a>&nbsp;/&nbsp;<a class="nav-link logout" href="#">로그아웃</a></span>
+                                <span class="d-flex"><a class="nav-link login" href="./Login.html">로그인</a>&nbsp;/&nbsp;<a class="nav-link logout" href="#">로그아웃</a></span>
                               </li>
                               <li class="nav-item">
-                                <span class="d-flex"><a class="nav-link findid" href="find_id.html">아이디 찾기</a>&nbsp;/&nbsp;<a class="nav-link findpwd" href="find_pwd.html">비밀번호 찾기</a></span>
+                                <a class="nav-link" href="./info.html">마이페이지</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link reformpwd" href="#">비밀번호 수정하기</a>
+                                <span class="d-flex"><a class="nav-link findid" href="./find_id.html">아이디 찾기</a>&nbsp;/&nbsp;<a class="nav-link findpwd" href="./find_pwd.html">비밀번호 찾기</a></span>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link reformpwd" href="./reform_pwd.html">비밀번호 수정하기</a>
                               </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">대출목록</a>
@@ -116,14 +121,14 @@ window.scrollTo(0, 1);
 </header>
 
 <section class="Box1">
-    <h1 class="Reform_pwd">비밀번호 재설정 완료</h1>
+    <h1 class="infoUpdate">정보수정 완료</h1>
     <hr>
-    <section class="Reform_pwd_com">
-      <h1>고객님의</h1><p>패스워드가 <span>수정완료</span> 되었습니다.</p>
+    <section class="infoUpdate_com">
+      <h1>홍길동님</h1><p>정보수정이 완료되었습니다.</p>
   </section>
-  <form name="join_form" id="join_form">
+  <form name="join_form" action="" method="get" id="jaoin_form">
   <p class="final_btn">
-    <a href="./Login.html"><button type="button" class="btn">로그인 하기</button></a>
+    <a href="./Main.html"><button type="button" class="btn">북알림 서비스 이용하기</button></a>
   </p>
 </form>
   </section>
