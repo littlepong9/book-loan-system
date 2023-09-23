@@ -125,7 +125,6 @@ border:none;
     height: 100%;
 }
 /* Body영역 */
-  /* Body 영역 */
   .Box1{
     background-color: #fcfcfc;
     width:540px;
@@ -167,6 +166,7 @@ border:none;
 
   .Box1 > form > p > input{
     margin:10px;
+    background-color: #fcfcfc;
     border-bottom:1px solid #000503;
     width:150px;
   }
