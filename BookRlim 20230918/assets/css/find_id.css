@@ -141,7 +141,7 @@ border:none;
   }
 
   .Box1 > .Find_id {
-    margin: 25px auto;
+    margin: 12.5px auto;
     font-family: 'paybooc-Bold';
     font-size: 33.5px;
     font-weight: bold;
@@ -168,7 +168,7 @@ border:none;
   .Box1 > form > p > input{
     margin:10px;
     border-bottom:1px solid #000503;
-    width:155px;
+    width:150px;
   }
 .Box1 > form > p
     {
